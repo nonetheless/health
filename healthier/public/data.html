@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="nonetheless">
+    <link rel="icon" href="/images/icon.ico">
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/data.css" rel="stylesheet">
+</head>
+<!-- NAVBAR
+================================================== -->
+<body>
+<div class="navbar-wrapper">
+    <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Healthier</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">主页</a></li>
+                        <li class="active"><a href="#about">运动</a></li>
+                        <li><a href="#contact">建议</a></li>
+                        <li><a href="#">活动</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">其他 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">导入建议</a></li>
+                                <li><a href="#">导入数据</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class = "nav navbar-nav navbar-right">
+                        <li class="dropdown info">
+                            <a href="#" class="dropdown-toggle info" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">消息数 +1<span class="caret"></span></a>
+                            <ul class="dropdown-menu info-menu">
+                                <li class="fans"><a herf="#">粉丝</a></li>
+                                <li class="game"><a herf="#">竞赛</a></li>
+                                <li class="sport"><a herf="#">健身</a></li>
+                                <li class="eat"><a herf="#">饮食</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown user">
+                            <a href="user" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img src="images/user.jpg" alt="nonetheless" class = "user_header img-circle" border="0" style="height: 25px;width: 25px">
+                                <ul class="dropdown-menu user-menu">
+                                    <li><a herf="#">个人设置</a></li>
+                                    <li><a herf="#">我的好友</a></li>
+                                    <li><a herf="#">登出</a></li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 sidebar">
+            <ul class="nav nav-sidebar" id="myTab" role="tablist">
+                <li role="presentation" class="active"><a href="#all" id="page_all" data-toggle="tab">概览</a></li>
+                <li role="presentation"><a href="#sports" id="page_sport" data-toggle="tab">运动</a></li>
+                <li role="presentation"><a href="#sleep" id="page_sleep" data-toggle="tab">睡眠</a></li>
+                <li role="presentation"><a href="#eat" id="page_eat" data-toggle="tab">饮食</a></li>
+
+            </ul>
+        </div>
+        <div class="col-lg-8 main">
+                <div class="tab-content">
+                    <div  role="tabpanel" class="tab-pane active" id="all">
+                        <div class="jumbotron">
+                            <h1>健康监控图片</h1>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <canvas id="pie1" data-type="Pie" width="100px" height="100px"></canvas>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <canvas id="pie2" data-type="Pie" width="100px" height="100px"></canvas>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <h1>健康数据</h1>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1,001</td>
+                                    <td>Lorem</td>
+                                    <td>ipsum</td>
+                                    <td>dolor</td>
+                                    <td>sit</td>
+                                </tr>
+                                <tr>
+                                    <td>1,002</td>
+                                    <td>amet</td>
+                                    <td>consectetur</td>
+                                    <td>adipiscing</td>
+                                    <td>elit</td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>Integer</td>
+                                    <td>nec</td>
+                                    <td>odio</td>
+                                    <td>Praesent</td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>libero</td>
+                                    <td>Sed</td>
+                                    <td>cursus</td>
+                                    <td>ante</td>
+                                </tr>
+                                <tr>
+                                    <td>1,004</td>
+                                    <td>dapibus</td>
+                                    <td>diam</td>
+                                    <td>Sed</td>
+                                    <td>nisi</td>
+                                </tr>
+                                <tr>
+                                    <td>1,005</td>
+                                    <td>Nulla</td>
+                                    <td>quis</td>
+                                    <td>sem</td>
+                                    <td>at</td>
+                                </tr>
+                                <tr>
+                                    <td>1,006</td>
+                                    <td>nibh</td>
+                                    <td>elementum</td>
+                                    <td>imperdiet</td>
+                                    <td>Duis</td>
+                                </tr>
+                                <tr>
+                                    <td>1,007</td>
+                                    <td>sagittis</td>
+                                    <td>ipsum</td>
+                                    <td>Praesent</td>
+                                    <td>mauris</td>
+                                </tr>
+                                <tr>
+                                    <td>1,008</td>
+                                    <td>Fusce</td>
+                                    <td>nec</td>
+                                    <td>tellus</td>
+                                    <td>sed</td>
+                                </tr>
+                                <tr>
+                                    <td>1,009</td>
+                                    <td>augue</td>
+                                    <td>semper</td>
+                                    <td>porta</td>
+                                    <td>Mauris</td>
+                                </tr>
+                                <tr>
+                                    <td>1,010</td>
+                                    <td>massa</td>
+                                    <td>Vestibulum</td>
+                                    <td>lacinia</td>
+                                    <td>arcu</td>
+                                </tr>
+                                <tr>
+                                    <td>1,011</td>
+                                    <td>eget</td>
+                                    <td>nulla</td>
+                                    <td>Class</td>
+                                    <td>aptent</td>
+                                </tr>
+                                <tr>
+                                    <td>1,012</td>
+                                    <td>taciti</td>
+                                    <td>sociosqu</td>
+                                    <td>ad</td>
+                                    <td>litora</td>
+                                </tr>
+                                <tr>
+                                    <td>1,013</td>
+                                    <td>torquent</td>
+                                    <td>per</td>
+                                    <td>conubia</td>
+                                    <td>nostra</td>
+                                </tr>
+                                <tr>
+                                    <td>1,014</td>
+                                    <td>per</td>
+                                    <td>inceptos</td>
+                                    <td>himenaeos</td>
+                                    <td>Curabitur</td>
+                                </tr>
+                                <tr>
+                                    <td>1,015</td>
+                                    <td>sodales</td>
+                                    <td>ligula</td>
+                                    <td>in</td>
+                                    <td>libero</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+
+
+                    <div  role="tabpanel" class="tab-pane active" id="sports">
+                        <div class="jumbotron">
+                            <h1>运动分布情况</h1>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <canvas id="pie3" data-type="Pie" width="100px" height="100px"></canvas>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <canvas id="pie4" data-type="Pie" width="100px" height="100px"></canvas>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <h1>运动数据</h1>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1,001</td>
+                                    <td>Lorem</td>
+                                    <td>ipsum</td>
+                                    <td>dolor</td>
+                                    <td>sit</td>
+                                </tr>
+                                <tr>
+                                    <td>1,002</td>
+                                    <td>amet</td>
+                                    <td>consectetur</td>
+                                    <td>adipiscing</td>
+                                    <td>elit</td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>Integer</td>
+                                    <td>nec</td>
+                                    <td>odio</td>
+                                    <td>Praesent</td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>libero</td>
+                                    <td>Sed</td>
+                                    <td>cursus</td>
+                                    <td>ante</td>
+                                </tr>
+                                <tr>
+                                    <td>1,004</td>
+                                    <td>dapibus</td>
+                                    <td>diam</td>
+                                    <td>Sed</td>
+                                    <td>nisi</td>
+                                </tr>
+                                <tr>
+                                    <td>1,005</td>
+                                    <td>Nulla</td>
+                                    <td>quis</td>
+                                    <td>sem</td>
+                                    <td>at</td>
+                                </tr>
+                                <tr>
+                                    <td>1,006</td>
+                                    <td>nibh</td>
+                                    <td>elementum</td>
+                                    <td>imperdiet</td>
+                                    <td>Duis</td>
+                                </tr>
+                                <tr>
+                                    <td>1,007</td>
+                                    <td>sagittis</td>
+                                    <td>ipsum</td>
+                                    <td>Praesent</td>
+                                    <td>mauris</td>
+                                </tr>
+                                <tr>
+                                    <td>1,008</td>
+                                    <td>Fusce</td>
+                                    <td>nec</td>
+                                    <td>tellus</td>
+                                    <td>sed</td>
+                                </tr>
+                                <tr>
+                                    <td>1,009</td>
+                                    <td>augue</td>
+                                    <td>semper</td>
+                                    <td>porta</td>
+                                    <td>Mauris</td>
+                                </tr>
+                                <tr>
+                                    <td>1,010</td>
+                                    <td>massa</td>
+                                    <td>Vestibulum</td>
+                                    <td>lacinia</td>
+                                    <td>arcu</td>
+                                </tr>
+                                <tr>
+                                    <td>1,011</td>
+                                    <td>eget</td>
+                                    <td>nulla</td>
+                                    <td>Class</td>
+                                    <td>aptent</td>
+                                </tr>
+                                <tr>
+                                    <td>1,012</td>
+                                    <td>taciti</td>
+                                    <td>sociosqu</td>
+                                    <td>ad</td>
+                                    <td>litora</td>
+                                </tr>
+                                <tr>
+                                    <td>1,013</td>
+                                    <td>torquent</td>
+                                    <td>per</td>
+                                    <td>conubia</td>
+                                    <td>nostra</td>
+                                </tr>
+                                <tr>
+                                    <td>1,014</td>
+                                    <td>per</td>
+                                    <td>inceptos</td>
+                                    <td>himenaeos</td>
+                                    <td>Curabitur</td>
+                                </tr>
+                                <tr>
+                                    <td>1,015</td>
+                                    <td>sodales</td>
+                                    <td>ligula</td>
+                                    <td>in</td>
+                                    <td>libero</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+
+
+                    <div  role="tabpanel" class="tab-pane active" id="sleep">
+                        <div class="jumbotron">
+                            <h1>睡眠资料图</h1>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <canvas id="pie5" data-type="Pie" width="100px" height="100px"></canvas>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <canvas id="pie6" data-type="Pie" width="100px" height="100px"></canvas>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <h1>健康数据</h1>
+
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1,001</td>
+                                    <td>Lorem</td>
+                                    <td>ipsum</td>
+                                    <td>dolor</td>
+                                    <td>sit</td>
+                                </tr>
+                                <tr>
+                                    <td>1,002</td>
+                                    <td>amet</td>
+                                    <td>consectetur</td>
+                                    <td>adipiscing</td>
+                                    <td>elit</td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>Integer</td>
+                                    <td>nec</td>
+                                    <td>odio</td>
+                                    <td>Praesent</td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>libero</td>
+                                    <td>Sed</td>
+                                    <td>cursus</td>
+                                    <td>ante</td>
+                                </tr>
+                                <tr>
+                                    <td>1,004</td>
+                                    <td>dapibus</td>
+                                    <td>diam</td>
+                                    <td>Sed</td>
+                                    <td>nisi</td>
+                                </tr>
+                                <tr>
+                                    <td>1,005</td>
+                                    <td>Nulla</td>
+                                    <td>quis</td>
+                                    <td>sem</td>
+                                    <td>at</td>
+                                </tr>
+                                <tr>
+                                    <td>1,006</td>
+                                    <td>nibh</td>
+                                    <td>elementum</td>
+                                    <td>imperdiet</td>
+                                    <td>Duis</td>
+                                </tr>
+                                <tr>
+                                    <td>1,007</td>
+                                    <td>sagittis</td>
+                                    <td>ipsum</td>
+                                    <td>Praesent</td>
+                                    <td>mauris</td>
+                                </tr>
+                                <tr>
+                                    <td>1,008</td>
+                                    <td>Fusce</td>
+                                    <td>nec</td>
+                                    <td>tellus</td>
+                                    <td>sed</td>
+                                </tr>
+                                <tr>
+                                    <td>1,009</td>
+                                    <td>augue</td>
+                                    <td>semper</td>
+                                    <td>porta</td>
+                                    <td>Mauris</td>
+                                </tr>
+                                <tr>
+                                    <td>1,010</td>
+                                    <td>massa</td>
+                                    <td>Vestibulum</td>
+                                    <td>lacinia</td>
+                                    <td>arcu</td>
+                                </tr>
+                                <tr>
+                                    <td>1,011</td>
+                                    <td>eget</td>
+                                    <td>nulla</td>
+                                    <td>Class</td>
+                                    <td>aptent</td>
+                                </tr>
+                                <tr>
+                                    <td>1,012</td>
+                                    <td>taciti</td>
+                                    <td>sociosqu</td>
+                                    <td>ad</td>
+                                    <td>litora</td>
+                                </tr>
+                                <tr>
+                                    <td>1,013</td>
+                                    <td>torquent</td>
+                                    <td>per</td>
+                                    <td>conubia</td>
+                                    <td>nostra</td>
+                                </tr>
+                                <tr>
+                                    <td>1,014</td>
+                                    <td>per</td>
+                                    <td>inceptos</td>
+                                    <td>himenaeos</td>
+                                    <td>Curabitur</td>
+                                </tr>
+                                <tr>
+                                    <td>1,015</td>
+                                    <td>sodales</td>
+                                    <td>ligula</td>
+                                    <td>in</td>
+                                    <td>libero</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+
+
+                    <div  role="tabpanel" class="tab-pane active" id="eat">
+                        <div class="jumbotron">
+                            <h1>饮食摄入情况图</h1>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <canvas id="pie7" data-type="Pie" width="100px" height="100px"></canvas>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <canvas id="pie8" data-type="Pie" width="100px" height="100px"></canvas>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <h1>健康数据</h1>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1,001</td>
+                                    <td>Lorem</td>
+                                    <td>ipsum</td>
+                                    <td>dolor</td>
+                                    <td>sit</td>
+                                </tr>
+                                <tr>
+                                    <td>1,002</td>
+                                    <td>amet</td>
+                                    <td>consectetur</td>
+                                    <td>adipiscing</td>
+                                    <td>elit</td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>Integer</td>
+                                    <td>nec</td>
+                                    <td>odio</td>
+                                    <td>Praesent</td>
+                                </tr>
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>libero</td>
+                                    <td>Sed</td>
+                                    <td>cursus</td>
+                                    <td>ante</td>
+                                </tr>
+                                <tr>
+                                    <td>1,004</td>
+                                    <td>dapibus</td>
+                                    <td>diam</td>
+                                    <td>Sed</td>
+                                    <td>nisi</td>
+                                </tr>
+                                <tr>
+                                    <td>1,005</td>
+                                    <td>Nulla</td>
+                                    <td>quis</td>
+                                    <td>sem</td>
+                                    <td>at</td>
+                                </tr>
+                                <tr>
+                                    <td>1,006</td>
+                                    <td>nibh</td>
+                                    <td>elementum</td>
+                                    <td>imperdiet</td>
+                                    <td>Duis</td>
+                                </tr>
+                                <tr>
+                                    <td>1,007</td>
+                                    <td>sagittis</td>
+                                    <td>ipsum</td>
+                                    <td>Praesent</td>
+                                    <td>mauris</td>
+                                </tr>
+                                <tr>
+                                    <td>1,008</td>
+                                    <td>Fusce</td>
+                                    <td>nec</td>
+                                    <td>tellus</td>
+                                    <td>sed</td>
+                                </tr>
+                                <tr>
+                                    <td>1,009</td>
+                                    <td>augue</td>
+                                    <td>semper</td>
+                                    <td>porta</td>
+                                    <td>Mauris</td>
+                                </tr>
+                                <tr>
+                                    <td>1,010</td>
+                                    <td>massa</td>
+                                    <td>Vestibulum</td>
+                                    <td>lacinia</td>
+                                    <td>arcu</td>
+                                </tr>
+                                <tr>
+                                    <td>1,011</td>
+                                    <td>eget</td>
+                                    <td>nulla</td>
+                                    <td>Class</td>
+                                    <td>aptent</td>
+                                </tr>
+                                <tr>
+                                    <td>1,012</td>
+                                    <td>taciti</td>
+                                    <td>sociosqu</td>
+                                    <td>ad</td>
+                                    <td>litora</td>
+                                </tr>
+                                <tr>
+                                    <td>1,013</td>
+                                    <td>torquent</td>
+                                    <td>per</td>
+                                    <td>conubia</td>
+                                    <td>nostra</td>
+                                </tr>
+                                <tr>
+                                    <td>1,014</td>
+                                    <td>per</td>
+                                    <td>inceptos</td>
+                                    <td>himenaeos</td>
+                                    <td>Curabitur</td>
+                                </tr>
+                                <tr>
+                                    <td>1,015</td>
+                                    <td>sodales</td>
+                                    <td>ligula</td>
+                                    <td>in</td>
+                                    <td>libero</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+    </div>
+
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/Chart.min.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+        $("canvas").each(function(){
+            var $canvas = $(this);
+            var ctx = this.getContext("2d");
+
+
+
+            var data = [
+                {
+                    value: 30,
+                    color:"#F38630"
+                },
+                {
+                    value : 50,
+                    color : "#E0E4CC"
+                },
+                {
+                    value : 100,
+                    color : "#69D2E7"
+                }
+            ]
+
+
+            var evalString = "new Chart(ctx)." + $canvas.data("type") + "(data);";
+
+            eval(evalString);
+        });
+    });
+
+</script>
+
+</body>
+</html>
